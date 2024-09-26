@@ -11,9 +11,10 @@ $ python3 -m venv venv
 ```
 activate venv
 ```
-$ . venv/script/activate #windows
-$ source venv/bin/activate #linux
-
+#windows
+$ . venv/script/activate
+#linux
+$ source venv/bin/activate 
 ```
 
 Install dependencies
