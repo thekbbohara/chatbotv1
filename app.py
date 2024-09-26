@@ -54,13 +54,13 @@ def get_response(msg):
     return "I do not understand..."
 
 # Define a request body model
-class Message(BaseModel):
-    message: str
+class Query(BaseModel):
+    query: str
 
 # Define a POST endpoint for the chatbot API
 @app.post("/chatbot/")
-def chatbot_response(msg: Message):
-    response = get_response(msg.message)
+def chatbot_response(req: Query):
+    response = get_response(req.query)
     return {"response": response}
 
 # Run the app (if you're not using uvicorn CLI)
