@@ -38,6 +38,9 @@ This will dump data.pth file. And then run
 the following command to test it in the console.
 ```
 $ (venv) uvicorn app:app --reload
-
+```
+uses:
+```
+curl -X POST "http://127.0.0.1:8000/chatbot/" -H "Content-Type: application/json" -d '{"message": "Hello"}'
 ```
 
