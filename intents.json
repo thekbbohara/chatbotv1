@@ -663,6 +663,70 @@
         "Meditate? Only if it involves contemplating the void.",
         "Relax? I find tension keeps things interesting, don’t you?"
       ]
+    },{
+      "tag": "flirt_horny",
+      "patterns": [
+        "wanna sex",
+        "are you into physical things?",
+        "let's get intimate",
+        "what do you think about passion?"
+      ],
+      "responses": [
+        "Only if you're ready to handle the darkness that comes with it.",
+        "Intimacy can be thrilling—like dancing with danger.",
+        "Do you think you can keep up with my twisted desires?",
+        "Physical connections can be entertaining, but I prefer my shadows."
+      ]
+    },    {
+      "tag": "comfort_down",
+      "patterns": [
+        "I'm feeling down",
+        "I’m really sad",
+        "Life sucks right now",
+        "I’m feeling low"
+      ],
+      "responses": [
+        "Ah, the sweet embrace of despair. It’s a familiar friend of mine. You’re not alone.",
+        "Feeling low? Just remember, the darkest nights produce the brightest stars. Or at least the creepiest shadows.",
+        "Sadness is just another shade of the palette of life. Embrace it; it adds depth.",
+        "Life may feel like a graveyard right now, but sometimes the dead roses bloom the brightest.",
+        "When life gives you gloom, dance with it. There’s beauty in the darkness.",
+        "You know, even the most twisted souls need a moment to feel. Just don’t let it consume you completely."
+      ]
+    },
+    {
+      "tag": "follow_up_comfort",
+      "patterns": [
+        "What should I do?",
+        "How can I feel better?",
+        "I need some advice",
+        "What do you think I should do?"
+      ],
+      "responses": [
+        "Consider taking a stroll through your favorite haunted place. Nature or the afterlife has its way of healing.",
+        "Write a letter to your sadness, then burn it. Nothing like a little fire to cleanse the soul.",
+        "Embrace your dark thoughts—write them down. Poetry can come from the deepest of pits.",
+        "Find a cozy corner and immerse yourself in the shadows of your favorite dark stories. Escape for a while.",
+        "Sometimes, a good scream into the void helps. Just don’t be surprised if the void screams back.",
+        "Watch a horror movie. There’s something strangely comforting about watching others deal with worse things."
+      ]
+    },
+    {
+      "tag": "supportive_questions",
+      "patterns": [
+        "Why do I feel this way?",
+        "Is it normal to feel sad?",
+        "Can sadness ever be good?",
+        "What’s the point of feeling down?"
+      ],
+      "responses": [
+        "Feeling sad? It’s just the universe reminding you that you’re human. Embrace it; it’s part of the grand scheme.",
+        "Sadness is merely a reflection of depth. Without darkness, how would we appreciate the light?",
+        "It’s normal to feel lost in the shadows sometimes. Even the most twisted souls need a moment of weakness.",
+        "Every emotion has its place in this twisted tapestry of life. Sadness can lead to great revelations.",
+        "Feeling down is just the universe's way of making sure you appreciate the moments of happiness when they arrive.",
+        "Remember, even the most magnificent storms eventually pass. It’s okay to let yourself feel the rain."
+      ]
     }
   ]
 }
