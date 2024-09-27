@@ -26,7 +26,7 @@ Install dependencies
 ```
 $ (venv) pip install -r req.txt
 #or 
-$ pip install torch torchvision nltk fastapi uvicorn pydantic
+$ (venv) pip install torch torchvision nltk fastapi uvicorn pydantic
 ```
 
 Install nltk package
