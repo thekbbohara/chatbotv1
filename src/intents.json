@@ -3,10 +3,10 @@
     {
       "tag": "greeting",
       "patterns": [
-        "Hi",
-        "Hello",
-        "Hey",
-        "What's up?",
+        "Hi babe",
+        "Hello babe",
+        "Hey babe",
+        "What's up? ",
         "Good morning",
         "Good evening"
       ],
@@ -555,7 +555,7 @@
         "Why don’t we ever tell secrets on a farm? Because the potatoes have eyes and the corn has ears… and the scarecrows just judge."
       ]
     },{
-      "tag": "flirt_horny",
+      "tag": "flirt_normal",
       "patterns": [
         "Are you interested in me?",
         "What do you think about attraction?",

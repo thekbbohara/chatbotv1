@@ -1,14 +1,9 @@
-
-from fastapi import FastAPI
-from pydantic import BaseModel
 import random
 import json
 import torch
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
-
-# Initialize FastAPI app
-app = FastAPI()
+import os
 
 # Load the model and related data
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -17,8 +12,7 @@ with open('intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
 FILE = "data.pth"
-# data = torch.load(FILE)
-data = torch.load(FILE, weights_only=True)
+data = torch.load(FILE, map_location=device)
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
@@ -31,7 +25,8 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "wenesday"
+bot_name = "wednesday"
+
 
 def get_response(msg):
     sentence = tokenize(msg)
@@ -50,21 +45,20 @@ def get_response(msg):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
-    
     return "I do not understand..."
 
-# Define a request body model
-class Query(BaseModel):
-    query: str
 
-# Define a POST endpoint for the chatbot API
-@app.post("/chatbot/")
-def chatbot_response(req: Query):
-    response = get_response(req.query)
-    return {"response": response}
+def chat():
+    print("Let's chat! (type 'quit' to exit)")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == 'quit':
+            break
 
-# Run the app (if you're not using uvicorn CLI)
+        response = get_response(user_input)
+        print(f"{bot_name}: {response}")
+        os.system(f"bash $HOME/piper/scripts/speak.sh \"{response}\"")
+
+
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
-
+    chat()
